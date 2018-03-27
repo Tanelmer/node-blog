@@ -8,35 +8,6 @@
     $('img').attr('draggable', 'false');
     $('a').attr('draggable', 'false');
 })();
- 
-//设置Cookie
-function setCookie(name, value, time) {
-    var strsec = getsec(time);
-    var exp = new Date();
-    exp.setTime(exp.getTime() + strsec * 1);
-    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
-}
-function getsec(str) {
-    var str1 = str.substring(1, str.length) * 1;
-    var str2 = str.substring(0, 1);
-    if (str2 == "s") {
-        return str1 * 1000;
-    } else if (str2 == "h") {
-        return str1 * 60 * 60 * 1000;
-    } else if (str2 == "d") {
-        return str1 * 24 * 60 * 60 * 1000;
-    }
-}
- 
-//获取Cookie
-function getCookie(name) {
-    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    if (arr = document.cookie.match(reg)) {
-        return unescape(arr[2]);
-    } else {
-        return null;
-    }
-}
 
 var checkall=document.getElementsByName("checkbox[]");  
 //全选
@@ -77,7 +48,7 @@ $('[data-toggle="tooltip"]').tooltip();
 };*/
 
 /*自定义右键菜单*/
-/*(function () {
+(function () {
     var oMenu = document.getElementById("rightClickMenu");
     var aLi = oMenu.getElementsByTagName("li");
 	//加载后隐藏自定义右键菜单
@@ -111,7 +82,7 @@ $('[data-toggle="tooltip"]').tooltip();
         $(oMenu).fadeOut(100);
 		//oMenu.style.display = "none"
     }
-})();*/
+})();
 
 /*禁止键盘操作*/
 /*document.onkeydown=function(event){
@@ -120,12 +91,3 @@ $('[data-toggle="tooltip"]').tooltip();
 		return false;
 	}
 }; */
-
-//Console
-try {
-    if (window.console && window.console.log) {
-        console.log("\n欢迎访问异清轩博客！\n\n在本站可以看到前端技术，后端程序，网站内容管理系统等文章；\n\n还有我的程序人生！！！\n");
-        console.log("\n请记住我们的网址：%c www.ylsat.com", "color:red");
-        console.log("\nPOWERED BY WY ALL RIGHTS RESERVED");
-    }
-} catch (e) {};

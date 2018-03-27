@@ -13,7 +13,7 @@ router.use(function(req,res,next) {
 
 router.get('/',function (req,res,next) {
 	return res.render('admin/index',{
-
+		user:req.userInfo
 	});
 });
 
