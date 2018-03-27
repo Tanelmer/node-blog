@@ -56,6 +56,7 @@ app.use('/',require('./routers/main'));
 
 
 app.use('/public',express.static(__dirname + '/public')); //静态文件
+app.use(express.static(__dirname + '/views/admin')); //静态文件
 
 var options = {
 	useMongoClient:true
