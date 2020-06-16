@@ -1,7 +1,7 @@
 # node - blog
 ## node实战简单项目
 ### express mongodb 
-### 欢迎交流 [elmerlxy.com](https://elmerlxy.com)
+### 欢迎交流 [elmerlxy.com](https://www.elmerlxy.com)
 
 ### 需安装node、mongodb环境
 两步开启服务
